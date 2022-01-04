@@ -5,13 +5,11 @@ import UserList from "./components/UserList/userList.js";
 function App() {
     return (
         <div className="App">
-            <div className="container" style={{"margin-top": "100px"}}>
+            <div className="container custom-container">
                 <div className="row">
-                    <div className="col-3"></div>
-                    <div className="col-6">
+                    <div className="col-12">
                         <UserList />
                     </div>
-                    <div className="col-3"></div>
                 </div>
             </div>
         </div>

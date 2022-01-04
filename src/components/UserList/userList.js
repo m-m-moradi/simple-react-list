@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import User from "../User/user.js";
 
 const baseURL = "https://jsonplaceholder.typicode.com/users";
 
@@ -17,11 +18,11 @@ export default function UserList() {
             {post ? (
                 <ul className="list-group">
                     {post.map((user) => {
-                        return <li className="list-group-item" key={user.id}>{user.name}</li>;
+                        return <User name={user.name} email={user.email} phone={user.phone} website={user.website} key={user.id} />;
                     })}
                 </ul>
             ) : (
-                <img src='../../../ripple.gif'></img>
+                <img src="../../../rolling.gif"></img>
             )}
         </div>
     );
